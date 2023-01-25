@@ -46,12 +46,21 @@ public class alumnos {
         rellenarCampos();
     }
     private void rellenarCampos(){
-        String[] nombresGuardados = {"Andres", "Brais", "Carlos", "Daniel", "Francisco", "Elena", "Alba", "Marta","Jorge","Marcos"};
+
+    String[] nombresGuardados = {"Andres", "Brais", "Carlos", "Daniel", "Francisco", "Elena", "Alba", "Marta","Jorge","Marcos"};
+    int[] numerosAleatorios=utilidadesMatematicas.numAleatorioEntero(0,10,numerodeAlumnos);
 /*
-//TODO me corta mi matriz a siete no entiendo bien que es lo que pasa
+TODO me corta mi matriz a siete no entiendo bien que es lo que pasa antes lo tenia así
+setNombres(nombresGuardados);
+setNotas(numerosAleatorios);
+
 */
-        setNombres(nombresGuardados);
-        setNotas(utilidadesMatematicas.numAleatorioEntero(0, 10, 10));
+
+
+        for (int i = 0; i < notas.length; i++) {
+            nombres[i]=nombresGuardados[utilidadesMatematicas.numAleatorioEntero(0,10)];
+            setNotas(numerosAleatorios);
+        }
 
 /*TODO asi es como lo hacia antes de divirlo en dos clases diferentes (v2)
         //
